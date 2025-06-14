@@ -81,6 +81,7 @@ body{
     height: 250px;
     border-radius: 8px;
     margin-bottom: 8px;
+    transition: width 0.3s ease, height 0.3s ease;
 }
 
 #top {
@@ -169,5 +170,11 @@ body{
     #brand-and-name {
         flex-direction: row;
     }
+}
+
+.proj-img:hover {
+    width: 410px;
+    height: 255px;
+    cursor: pointer;
 }
 
