@@ -1,0 +1,44 @@
+#container {
+    display: flex;
+    flex-direction: row;
+}
+
+#abbreviated {
+    margin: 20px;
+}
+
+.projects {
+    display: flex;
+    justify-content: center;  
+    align-items: center;      
+    gap: 2rem;                
+    flex-wrap: wrap;          
+  }
+  
+.proj-desc  {
+    width: 250px;
+}
+
+.proj-desc h5,
+.proj-desc p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.proj-tags {
+    font-size: 12px;
+    display: flex;
+    flex-direction: row;
+}
+
+.tag {
+    padding-right: 8px;
+}
+
+.proj-img {
+    background-color: black;
+    width: 240px;
+    height: 140px;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
