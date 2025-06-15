@@ -10,6 +10,23 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="dropdown">
+        <button class="icon-btn" onclick="toggleMenu()" aria-label="Open menu">
+            <!-- Hamburger Icon -->
+            <svg width="32" height="32" viewBox="0 0 32 32">
+                <rect y="6" width="32" height="4" rx="2" fill="white"/>
+                <rect y="14" width="32" height="4" rx="2" fill="white"/>
+                <rect y="22" width="32" height="4" rx="2" fill="white"/>
+            </svg>
+        </button>
+        <div id="dropdownMenu" class="dropdown-content">
+            <button>Portfolio</button>
+            <button>About Me</button>
+            <button>Dance</button>
+        </div>
+    </div>
+    <div id="overlay"></div>
+
     <div id="top">
         <div id="intro">
             <div id="brand-and-name">
@@ -17,14 +34,13 @@
                 <h4>Christiana Simone Mendoza</h4>
             </div>
             <p>Hi, I’m Christiana, an innovative, empathetic, and passionate UI/UX designer based in Berkeley! I dance, choreograph, and craft meaningful designs that inspire and leave a lasting impact</p>
-        </div>    
-        
+        </div>
     </div>
     <div id="bottom">
         <div class="projects">
             <div id="first-row">
                 <div id="project-1">
-                    <img src="imgs/bsc-ss.png" id="project-1-img" class="proj-img">
+                    <img src="imgs/bsc-ss.png" id="project-1-img" class="proj-img" alt="BSC Project Screenshot">
                     <div id="project-1-description" class="proj-desc">
                         <h3>Berkeley Student Coop (BSC)</h3>
                         <p>Streamline the search for and manage affording 
@@ -38,7 +54,7 @@
                     </div>
                 </div>
                 <div id="project-2">
-                    <div id="project-2-img" class="proj-img"></div>
+                    <img src="imgs/gr.png" id="project-2-img" class="proj-img" alt="GoodReads Screenshot">
                     <div id="project-2-description" class="proj-desc">
                         <h3>GoodReads</h3>
                         <p>Find books, connect, and modernize your literary experience</p>
@@ -52,7 +68,7 @@
             </div>
             <div id="second-row">
                 <div id="project-3">
-                    <div id="project-3-img" class="proj-img"></div>
+                    <img src="imgs/hero2.png" id="project-3-img" class="proj-img" alt="HERO2 Project Screenshot">
                     <div id="project-3-description" class="proj-desc">
                         <h3>HERO2</h3>
                         <p>Streamline the search for and manage affording 
@@ -67,5 +83,6 @@
             </div>
         </div>
     </div>
+    <script src="script.js"></script>
 </body>
 </html>

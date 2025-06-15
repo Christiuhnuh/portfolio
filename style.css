@@ -1,12 +1,6 @@
-
-
-#container {
-    display: flex;
-    flex-direction: row;
-}
-
-#abbreviated {
-    margin: 20px;
+body {
+    margin:0;
+    background-color: #F9F4E7;
 }
 
 h1, h4, h3 {
@@ -20,11 +14,59 @@ p {
 
 #intro h1 {
     font-size: 200px;
+    margin-top: 0;
 }
 
-body{
-    margin:0;
-    background-color: #F9F4E7;
+#top {
+    display: flex;
+    background-color: #2C283B;
+    margin: 0;
+    color: white;
+    height: 700px;
+    justify-content: center;
+    align-items: center;
+}
+
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;     
+    justify-content: center; 
+    margin: 0;
+}
+
+#intro p {
+    width: 400px;
+    text-align: center;      
+}
+
+#brand-and-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+    padding: 0;
+    margin: 0 auto;
+    column-gap: 2rem;
+}
+
+#brand-and-name h1, #brand-and-name h4 {
+    margin: 0;
+    padding:0;
+}
+
+#brand-and-name h4 {
+    display: flex;
+    justify-content: center;
+}
+
+#bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;  
+    align-items: center;
+    height: 1400px;       
 }
 
 .projects {
@@ -35,7 +77,7 @@ body{
     align-items: start;      
     gap: 2rem;                
     flex-wrap: wrap;          
-  }
+}
 
 #project-1, #project-2, #project-3 {
     display: flex;
@@ -46,20 +88,20 @@ body{
     margin-right: auto;        
     padding-left: 0;
     padding-right: 0;
-  }
-  
+}
+
 .proj-desc  {
     width: 400px;
 }
 
 .proj-desc h3 {
-  margin-top: 12px;
-  margin-bottom: 4px;
+    margin-top: 12px;
+    margin-bottom: 4px;
 }
 
 .proj-desc p {
-  margin-top: 8px;
-  margin-bottom: 4px;
+    margin-top: 8px;
+    margin-bottom: 4px;
 }
 
 .proj-tags {
@@ -84,63 +126,11 @@ body{
     transition: width 0.3s ease, height 0.3s ease;
 }
 
-#top {
-    display: flex;
-    background-color: #2C283B;
-    margin: 0;
-    color: white;
-    height: 700px;
-    justify-content: center;
-    align-items: center;
+.proj-img:hover {
+    width: 410px;
+    height: 255px;
+    cursor: pointer;
 }
-
-#intro h1 {
-    margin-top: 0
-}
-
-#intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;     
-    justify-content: center; 
-    margin: 0;
-}
-
-#intro p {
-    width: 400px;
-    text-align: center;      
-}
-
-#brand-and-name {
-    display: flex;                /* or flex-direction: column, as needed */
-    flex-direction: column;       /* stack CSM and name vertically */
-    align-items: center;      /* or center, if you want */       
-    width: fit-content;           /* hug content horizontally */
-    height: fit-content;          /* hug content vertically */
-    padding: 0;                   /* remove extra padding */
-    margin: 0 auto;               /* center horizontally if desired */
-    column-gap: 2rem;
-  }
-
-#brand-and-name h1, #brand-and-name h4  {
-    margin: 0;
-    padding:0;
-}
-
-#brand-and-name h4 {
-    display: flex;
-    justify-content: center;
-}
-  
-
-#bottom {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;  
-    align-items: center;
-    height: 1400px;       
-}
-
 
 #first-row {
     display: flex;
@@ -151,6 +141,10 @@ body{
 @media (min-width: 775px) {
     #bottom {
         height: 1000px;
+    }
+
+    #top {
+        height: 800px;
     }
 
     #intro h1 {
@@ -172,9 +166,70 @@ body{
     }
 }
 
-.proj-img:hover {
-    width: 410px;
-    height: 255px;
+/* Dropdown styles */
+.dropdown {
+    position: absolute;
+    top: 32px;
+    left: 32px;
+    z-index: 1001;
+}
+
+.icon-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 50%;
+    transition: background 0.2s;
+    outline: none;
+}
+
+.icon-btn:hover {
     cursor: pointer;
 }
 
+.dropdown-content {
+    display: none;
+    color: white;
+    flex-direction: column;
+    border-radius: 8px;
+    min-width: 160px;
+    padding: 12px;
+    right: 0;
+    top: 40px;
+    z-index: 1002;
+}
+
+.dropdown-content.show {
+    display: flex;
+}
+
+.dropdown-content button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    padding: 12px 0;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    transition: color 0.2s;
+}
+
+.dropdown-content button:hover {
+    color: #04AA6D;
+    background: none;
+}
+
+/* Overlay styles */
+#overlay {
+    position: fixed;
+    top: 0; left: 0; right: 0; bottom: 0;
+    background: rgba(0,0,0,0.4);
+    z-index: 999;
+    display: none;
+}
+
+#overlay.active {
+    display: block;
+}
